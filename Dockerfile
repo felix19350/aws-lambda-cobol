@@ -27,7 +27,7 @@ RUN pip install \
   awslambdaric
 
 # Compile the cobol program
-RUN cobc -x ${FUNCTION_DIR}/hello-world.cbl -o ${FUNCTION_DIR}/hello-world
+RUN cobc -x ${FUNCTION_DIR}/cobol-program.cob -o ${FUNCTION_DIR}/cobol-program
 
 # Multi-stage build: grab a fresh copy of the base image
 FROM python:3.10-buster

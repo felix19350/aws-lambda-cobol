@@ -19,9 +19,9 @@ def handler(event, context):
     logger.warning(f"Event: {event}")
     logger.warning(f"Context: {context}")
 
-    stream = os.popen("./hello-world")
+    stream = os.popen("./cobol-program")
     with stream as s:
         message = s.read()
-        logger.info(f"Message from COBOL: {message}")
+        logger.info(f"Output from COBOL: {message}")
 
     return {"message": message}
